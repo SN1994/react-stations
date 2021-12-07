@@ -20,8 +20,6 @@ import './App.css'
 );
 }
 
-export default Dog;
-
 export const App = () => {
     return ( 
     <div>
