@@ -1,12 +1,27 @@
 // DO NOT DELETE
-
-import * as React from 'react'
+import React, { useState } from 'react';
 import './App.css'
 
 /**
  * 
  * @type {React.FC}
  */
+
+ function Dog() {
+
+  const [dogUrl, setDogUrl] 
+  = useState(<img src="https://images.dog.ceo/breeds/schnauzer-miniature/n02097047_1866.jpg" />);
+
+  return (
+      <div>
+        { dogUrl }
+        { setDogUrl }
+      </div>
+);
+}
+
+export default Dog;
+
 export const App = () => {
     return ( 
     <div>
