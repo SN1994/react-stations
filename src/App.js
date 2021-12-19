@@ -31,7 +31,7 @@ export const App = () => {
     return <div>Error: {error.message}</div>
   } else {
     return (
-      <div>
+      <div className="App">
         <header> 
         	<h1>Orginal Dogアプリ</h1>
       	</header>
@@ -39,7 +39,7 @@ export const App = () => {
         <body>
           <p>犬の画像を表示するサイトです</p>
           <img src={dogUrl} />
-          <p><button onClick={() => Reload()}>Click Me</button></p>
+          <button onClick={() => Reload()}>Click Me</button>
         </body>
       </div>
     )
