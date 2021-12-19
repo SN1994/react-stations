@@ -37,9 +37,8 @@ export const App = () => {
       	</header>
     	<p>犬の画像紹介サイトです！！</p>
         <body>
-          <p>犬の画像を表示するサイトです</p>
           <img src={dogUrl} />
-          <button onClick={() => Reload()}>Click Me</button>
+          <p><button onClick={() => Reload()}>Click Me</button></p>
         </body>
       </div>
     )
