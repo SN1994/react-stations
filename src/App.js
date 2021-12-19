@@ -6,23 +6,16 @@ export const App = () => {
   const [dogUrl, setDogUrl] = useState(
     "https://images.dog.ceo/breeds/setter-english/n02100735_3942.jpg",
   )
-  const [isLoading, setIsLoading] = useState(true)
 
   const Reload = () => {
-    setIsLoading(false)
     fetch('https://dog.ceo/api/breeds/image/random')
       .then(res => res.json())
       .then(
         result => {
-          setIsLoading(true)
           setDogUrl(result.message)
         },
       )
   }
-
-  if (!isLoading) {
-    return <div>Loading...</div>
-  } else {
     return (
       <div>
         <header> 
@@ -30,10 +23,9 @@ export const App = () => {
       	</header>
     	    <p>犬の画像紹介サイトです！！</p>
         <body>
-          <img src={dogUrl} />
+          <img src={dogUrl} alt ="犬の画像"/>
           <p><button onClick={() => Reload()}>Click Me</button></p>
         </body>
       </div>
     )
   }
-}
